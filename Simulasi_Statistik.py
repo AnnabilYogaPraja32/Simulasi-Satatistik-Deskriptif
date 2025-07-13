@@ -54,11 +54,11 @@ except StatisticsError:
     data_mode = "Tidak unik"
 
 stats = {
-    "Mean": np.mean(data),
-    "Median": np.median(data),
-    "Modus": data_mode,
-    "Varians": np.var(data, ddof=1),
-    "Standar Deviasi": np.std(data, ddof=1)
+    "Mean (Jumlah Data Keseluruhan)": np.mean(data),
+    "Median (Nilai Tengah Saat Data Diurutkan)": np.median(data),
+    "Modus (Nilai yang Paling Sering Muncul)": data_mode,
+    "Varians (Rata-rata Kuadrat Selisih Tiap Data Terhadap Mean)": np.var(data, ddof=1),
+    "Standar Deviasi (Akar dari varians (sebaran data dari rata-rata)": np.std(data, ddof=1)
 }
 st.table(pd.DataFrame(stats, index=["Nilai"]).T)
 
